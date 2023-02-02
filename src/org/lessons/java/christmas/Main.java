@@ -15,6 +15,14 @@ public class Main {
 
 		Scanner s = new Scanner(System.in);
 
+		addingElements(s, wishList);
+
+		s.close();
+
+	}
+
+	public static void addingElements(Scanner s, ArrayList<String> wishList) {
+
 		String choice = "";
 
 		do {
@@ -34,8 +42,6 @@ public class Main {
 			System.out.println("----------------------------------------------------");
 
 		} while (choice.toLowerCase().equals("s"));
-
-		s.close();
 
 	}
 
