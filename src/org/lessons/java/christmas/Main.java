@@ -11,7 +11,7 @@ public class Main {
 
 		System.out.print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 		System.out.print("- Benvenuto nella tua lista dei desideri! -");
-		System.out.print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n");
 
 		Scanner s = new Scanner(System.in);
 
@@ -19,11 +19,19 @@ public class Main {
 
 		do {
 
-			System.out.println("\nInserire un desiderio da aggiungere alla lista: ");
+			System.out.println("Inserire un desiderio da aggiungere alla lista: ");
 			String wishToAdd = s.nextLine();
 
-			System.out.println("Continuare ad inserire desideri? [S/N]");
+			wishList.add(wishToAdd);
+
+			System.out.println("----------------------------------------------------");
+
+			System.out.println("Elementi presenti in lista: " + wishList.size());
+
+			System.out.println("\nContinuare ad inserire desideri? [S/N]");
 			choice = s.nextLine();
+
+			System.out.println("----------------------------------------------------");
 
 		} while (choice.toLowerCase().equals("s"));
 
