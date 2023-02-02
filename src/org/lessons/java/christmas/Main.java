@@ -1,6 +1,8 @@
 package org.lessons.java.christmas;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -18,6 +20,8 @@ public class Main {
 		addingElements(s, wishList);
 
 		s.close();
+
+		sortWishList(wishList);
 
 	}
 
@@ -42,6 +46,19 @@ public class Main {
 			System.out.println("----------------------------------------------------");
 
 		} while (choice.toLowerCase().equals("s"));
+
+	}
+
+	public static void sortWishList(ArrayList<String> wishList) {
+
+		System.out.println("Lista ordinata in ordine alfabetico: ");
+
+		Collections.sort(wishList);
+
+		for (Iterator<String> iterator = wishList.iterator(); iterator.hasNext();) {
+			String string = (String) iterator.next();
+			System.out.println(string);
+		}
 
 	}
 
